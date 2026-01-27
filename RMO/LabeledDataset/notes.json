@@ -1,0 +1,21 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "1zl"
+    },
+    {
+      "id": 1,
+      "name": "2zl"
+    },
+    {
+      "id": 2,
+      "name": "5zl"
+    }
+  ],
+  "info": {
+    "year": 2026,
+    "version": "1.0",
+    "contributor": "Label Studio"
+  }
+}

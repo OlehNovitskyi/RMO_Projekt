@@ -1,0 +1,6 @@
+train: D:\yolov11\train
+val: D:\yolov11\valid
+
+nc: 3
+
+names: ["1zl", "2zl", "5zl"]
