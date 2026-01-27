@@ -13,7 +13,6 @@ def analyze_image():
         filetypes=[("Image files", "*.jpg *.png *.jpeg")]
     )
     if path:
-        messagebox.showinfo("Selected image", path)
         run_model(mode="image", source=path)
 
 
@@ -23,7 +22,6 @@ def analyze_video():
         filetypes=[("Video files", "*.mp4 *.avi *.mov")]
     )
     if path:
-        messagebox.showinfo("Selected video", path)
         run_model(mode="video", source=path)
 
 
@@ -39,7 +37,7 @@ def run_model(mode, source):
         r = results[0]
         class_ids = r.boxes.cls.tolist()
         counts = Counter(class_ids)
-        print(counts)
+        #print(counts)
         suma = 0
 
         for class_id, count in counts.items():
@@ -62,7 +60,7 @@ root.geometry("300x200")
 btn_image = tk.Button(root, text="Zdjęcie", command=analyze_image, width=25)
 btn_video = tk.Button(root, text="Wideo", command=analyze_video, width=25)
 btn_webcam = tk.Button(root, text="Webcam", command=analyze_webcam, width=25)
-btn_exit = tk.Button(root, text="Wyjście", command=root.destroy, width=25)
+btn_exit = tk.Button(root, command=root.destroy, width=25)
 
 btn_image.pack(pady=10)
 btn_video.pack(pady=10)
