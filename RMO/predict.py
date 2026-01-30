@@ -50,7 +50,7 @@ def run_model(mode, source):
     elif mode == "video":
         model.predict(source=source, show=True, save=True)
     elif mode == "webcam":
-        model.predict(source=source, show=True, save=False)
+        model.predict(source=source, show=True, save=True)
 
 
 root = tk.Tk()
