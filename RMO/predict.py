@@ -4,8 +4,8 @@ from tkinter import filedialog, messagebox
 from collections import Counter
 
 model = YOLO("yolov11_customdata_trained.pt")
-monety_voc = {'1zl': 1, '2zl': 2, '5zl': 5}
 
+monety_voc = {'1zl': 1, '2zl': 2, '5zl': 5}
 
 def analyze_image():
     path = filedialog.askopenfilename(
